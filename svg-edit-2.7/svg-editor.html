@@ -66,6 +66,18 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 <script src="jquery-ui/jquery-ui-1.8.17.custom.min.js"></script>
 <script src="jgraduate/jpicker.js"></script>
 
+<script>
+// $(document).ready(function(){
+// 	$("#workarea").scroll(function(e){
+// 		console.log(e);
+// 		var width = $(this).css("width");
+// 		var height = $(this).css("height");
+// 		$(this).css("width", width);
+// 		$(this).css("height", height);
+// 	})
+// });
+
+// </script>
 <!-- feeds -->
 <link rel="alternate" type="application/atom+xml" title="SVG-edit General Discussion" href="http://groups.google.com/group/svg-edit/feed/atom_v1_0_msgs.xml" />
 <link rel="alternate" type="application/atom+xml" title="SVG-edit Updates (Issues/Fixes/Commits)" href="http://code.google.com/feeds/p/svg-edit/updates/basic" />
@@ -331,13 +343,15 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 			</label>
 			<div id="font_family_dropdown" class="dropdown">
 				<button></button>
-				<ul>
-					<li style="font-family:serif">Serif</li>
-					<li style="font-family:sans-serif">Sans-serif</li>
-					<li style="font-family:cursive">Cursive</li>
-					<li style="font-family:fantasy">Fantasy</li>
-					<li style="font-family:monospace">Monospace</li>
-				</ul>
+				<div id="font-list-drop">
+					<ul>
+						<li style="font-family:serif">Serif</li>
+						<li style="font-family:sans-serif">Sans-serif</li>
+						<li style="font-family:cursive">Cursive</li>
+						<li style="font-family:fantasy">Fantasy</li>
+						<li style="font-family:monospace">Monospace</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 
@@ -453,7 +467,6 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 				<li>100%</li>
 			</ul>
 		</div> -->
-		<div class="tool_sep"></div>
 	</div>
 
 	<div id="tools_bottom_2">

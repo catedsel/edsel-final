@@ -8222,7 +8222,7 @@ $.SvgCanvas = function(a, I) {
                 }, D = {}, u = {
                     extensions: [],
                     allowedOrigins: []
-                }, A = ["ext-overview_window.js", "ext-connector.js", "ext-shapes.js", "ext-imagelib.js", "ext-grid.js", "ext-polygon.js", "ext-star.js", "ext-panning.js", "ext-storage.js"
+                }, A = ["ext-overview_window.js", "ext-connector.js", "ext-shapes.js", "ext-imagelib.js", "ext-grid.js", "ext-polygon.js", "ext-star.js", "ext-storage.js"
                 ],
                 p = {
                     canvasName: "default",
@@ -9010,53 +9010,57 @@ $.SvgCanvas = function(a, I) {
                     }, Gb = function(h) {
                         var k = Math.min(Math.max(12 + h.value.length * 6, 50), 300);
                         a(h).width(k)
-                    }, eb = o.updateCanvas = function(h, k) {
-                        var H = Y.width(),
-                            F = Y.height(),
-                            Q = H,
-                            U = F,
-                            Z = c.getZoom(),
-                            ga = a("#svgcanvas"),
-                            ja = {
-                                x: Y[0].scrollLeft + Q / 2,
-                                y: Y[0].scrollTop + U / 2
-                            }, la = u.canvas_expansion;
-                        H = Math.max(Q, c.contentW * Z * la);
-                        F = Math.max(U, c.contentH * Z * la);
-                        H == Q && F == U ? Y.css("overflow", "hidden") : Y.css("overflow", "scroll");
-                        la = ga.height() / 2;
-                        var ia = ga.width() / 2;
-                        ga.width(H).height(F);
-                        var na = F / 2,
-                            sa = H / 2,
-                            Ha = c.updateCanvas(H, F),
-                            W = sa / ia;
-                        H = H / 2 - Q / 2;
-                        F = F / 2 - U / 2;
-                        if (k) {
-                            k.x += Ha.x;
-                            k.y += Ha.y
-                        } else k = {
-                            x: sa + (ja.x - ia) * W,
-                            y: na + (ja.y - la) * W
-                        }; if (h)
-                            if (c.contentW > Y.width()) {
-                                Y[0].scrollLeft = Ha.x - 10;
-                                Y[0].scrollTop = Ha.y - 10
-                            } else {
-                                Y[0].scrollLeft = H;
-                                Y[0].scrollTop = F
-                            } else {
-                                Y[0].scrollLeft = k.x - Q / 2;
-                                Y[0].scrollTop = k.y - U / 2
-                            }
-                        if (u.showRulers) {
-                            da(ga,
-                                Z);
-                            Y.scroll()
-                        }
-                        i.storagePrompt !== true && !o.storagePromptClosed && a("#dialog_box").hide()
-                    }, sb = function() {
+                    }, 
+                    eb = o.updateCanvas = function(h, k) {
+                        //THIS BITCH IS THE ZOOMING MFER THAT KILLS MY SOUL
+
+                        // var H = Y.width(),
+                        //     F = Y.height(),
+                        //     Q = H,
+                        //     U = F,
+                        //     Z = c.getZoom(),
+                        //     ga = a("#svgcanvas"),
+                        //     ja = {
+                        //         x: Y[0].scrollLeft + Q / 2,
+                        //         y: Y[0].scrollTop + U / 2
+                        //     }, la = u.canvas_expansion;
+                        // H = Math.max(Q, c.contentW * Z * la);
+                        // F = Math.max(U, c.contentH * Z * la);
+                        // H == Q && F == U ? Y.css("overflow", "hidden") : Y.css("overflow", "scroll");
+                        // la = ga.height() / 2;
+                        // var ia = ga.width() / 2;
+                        // ga.width(H).height(F);
+                        // var na = F / 2,
+                        //     sa = H / 2,
+                        //     Ha = c.updateCanvas(H, F),
+                        //     W = sa / ia;
+                        // H = H / 2 - Q / 2;
+                        // F = F / 2 - U / 2;
+                        // if (k) {
+                        //     k.x += Ha.x;
+                        //     k.y += Ha.y
+                        // } else k = {
+                        //     x: sa + (ja.x - ia) * W,
+                        //     y: na + (ja.y - la) * W
+                        // }; if (h)
+                        //     if (c.contentW > Y.width()) {
+                        //         Y[0].scrollLeft = Ha.x - 10;
+                        //         Y[0].scrollTop = Ha.y - 10
+                        //     } else {
+                        //         Y[0].scrollLeft = H;
+                        //         Y[0].scrollTop = F
+                        //     } else {
+                        //         Y[0].scrollLeft = k.x - Q / 2;
+                        //         Y[0].scrollTop = k.y - U / 2
+                        //     }
+                        // if (u.showRulers) {
+                        //     da(ga,
+                        //         Z);
+                        //     Y.scroll()
+                        // }
+                        // i.storagePrompt !== true && !o.storagePromptClosed && a("#dialog_box").hide()
+                    }, 
+                    sb = function() {
                         var h, k, H = c.getColor("fill") == "none",
                             F = c.getColor("stroke") == "none",
                             Q = ["#tool_fhpath", "#tool_line"],
@@ -10745,10 +10749,10 @@ $.SvgCanvas = function(a, I) {
                     a("#opacity_dropdown button").mousedown();
                     a(window).mouseup()
                 });
-                a("#zoomLabel").click(function() {
-                    a("#zoom_dropdown button").mousedown();
-                    a(window).mouseup()
-                });
+                // a("#zoomLabel").click(function() {
+                //     a("#zoom_dropdown button").mousedown();
+                //     a(window).mouseup()
+                // });
                 a("#tool_move_top").mousedown(function(h) {
                     a("#tools_stacking").show();
                     h.preventDefault()

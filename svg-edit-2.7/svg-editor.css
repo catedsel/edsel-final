@@ -18,13 +18,13 @@ html, body, div{
 
 .my-button {
 	background-color: #80dccc;
-	height: 30px;
-	margin-top: -3px;
-	font-size: 1.6em;
+	height: 50px;
+	margin-top: 2px;
+	font-size: 1.9em;
 	font-family: 'Josefin Sans', sans-serif;
 	font-weight: 600;
 	color: #000;
-	text-shadow: 0.2px 0.2px 2px #fff;
+	text-shadow: 1px 1px 1px #fff;
 }
 
 #browser-not-supported {
@@ -44,6 +44,10 @@ html, body, div{
 	font-size: 8pt;
 	font-family: Verdana, Helvetica, Arial;
 	color: #000000;
+}
+
+#font-list-drop {
+	position: relative;
 }
 
 a {
@@ -177,7 +181,7 @@ select {
 #workarea {
 	display: inline-table-cell;
 	position:absolute;
-	top: 40px;
+	top: 70px;
 	left: 40px;
 	bottom: 40px;
 	right: 14px;
@@ -508,7 +512,7 @@ div.palette_item:first-child {
 	position: absolute;
 	border-right: none;
 	width: 32px;
-	top: 40px;
+	top: 70px;
 	left: 1px;
 	margin-top: -2px;
 	padding-left: 2px;
