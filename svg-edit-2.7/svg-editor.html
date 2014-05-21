@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="svg-editor.css" type="text/css"/>
 <link rel="stylesheet" href="spinbtn/JQuerySpinBtn.css" type="text/css"/>
 
-<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Josefin+Slab:400,600,700' rel='stylesheet' type='text/css'>
 
 <!--{if jquery_release}>
 
@@ -431,7 +431,7 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 	<!--<div class="tool_button" id="tool_path" title="Path Tool"></div>-->
 	<div class="tool_button" id="tool_text" title="Text Tool"></div>
 	<!--<div class="tool_button" id="tool_image" title="Image Tool"></div>-->
-	<div class="tool_button" id="tool_zoom" title="Zoom Tool [Ctrl+Up/Down]"></div>
+	<!--<div class="tool_button" id="tool_zoom" title="Zoom Tool [Ctrl+Up/Down]"></div>-->
 	
 	<div style="display: none">
 		<div id="tool_rect" title="Rectangle"></div>
@@ -470,24 +470,24 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 	</div>
 
 	<div id="tools_bottom_2">
-		<div id="color_tools">
+		<div id="color_tools_poo">
 			
-			<div class="color_tool" id="tool_fill">
-				<label class="icon_label" for="fill_color" title="Change fill color"></label>
+			<div class="color_tool" id="tool_fill" style="border:2px solid red; ">
+				<span>Fill Color</span>
 				<div class="color_block">
 					<div id="fill_bg"></div>
 					<div id="fill_color" class="color_block"></div>
 				</div>
 			</div>
 		
-			<div class="color_tool" id="tool_stroke">
+			<div class="color_tool" id="tool_stroke" style="border:2px solid orange;">
 				<label class="icon_label" title="Change stroke color"></label>
 				<div class="color_block">
 					<div id="stroke_bg"></div>
 					<div id="stroke_color" class="color_block" title="Change stroke color"></div>
 				</div>
 				
-				<label class="stroke_label">
+				<label class="stroke_label" style="border:2px solid green;">
 					<input id="stroke_width" title="Change stroke width by 1, shift-click to change by 0.1" size="9" value="5" type="text" data-attr="Stroke Width"/>
 				</label>
 
@@ -515,9 +515,9 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 
 			</div>
 
-			<div class="color_tool" id="tool_opacity" title="Change selected item opacity">
+			<div class="color_tool opacity" id="tool_opacity" title="Change selected item opacity">
+				<span>Opacity</span>
 				<label>
-					<span id="group_opacityLabel" class="icon_label"></span>
 					<input id="group_opacity" size="3" value="100" type="text"/>
 				</label>
 				<div id="opacity_dropdown" class="dropdown">
@@ -536,9 +536,9 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 
 	</div>
 
-	<div id="tools_bottom_3">
+	<!-- <div id="tools_bottom_3">
 		<div id="palette_holder"><div id="palette" title="Click to change fill color, shift-click to change stroke color"></div></div>
-	</div>
+	</div> -->
 	<!-- <div id="copyright"><span id="copyrightLabel">Powered by</span> <a href="http://svg-edit.googlecode.com/" target="_blank">SVG-edit v2.6-beta</a></div> -->
 </div>
 

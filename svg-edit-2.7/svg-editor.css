@@ -16,16 +16,40 @@ html, body, div{
 	float: left;
 }
 
+
 .my-button {
 	background-color: #80dccc;
 	height: 50px;
 	margin-top: 2px;
 	font-size: 1.9em;
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'Josefin Slab', sans-serif;
 	font-weight: 600;
 	color: #000;
-	text-shadow: 1px 1px 1px #fff;
+	text-shadow: 1px 1px 2px #fff;
+	border: 1px solid #0b2974;
+	box-shadow: inset 1px 1px 2px white, 1px 1px 1px rgba(0,0,0,0.3)
 }
+
+/*.opacity {
+	width: 170px;
+	left: 200px;
+	font-family: 'Josefin Slab', sans-serif;
+	font-weight: 600;
+	font-size: 1.9em;
+
+}*/
+
+/*.fill-color {
+	font-family: 'Josefin Slab', sans-serif;
+	font-weight: 600;
+	font-size: 1.9em;
+	border: 3px solid pink;
+	float: left;
+}
+
+.color_block_fill_color {
+	float:left;
+}*/
 
 #browser-not-supported {
 	font-size: 0.8em;
@@ -488,7 +512,7 @@ div.palette_item:first-child {
 .tool_button_current,
 .push_button_pressed,
 .buttondown {
-	background-color: #f4e284 !important;
+	background-color: #ff5654 !important;
 	-webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.4), 1px 1px  0 white  !important;
 	-moz-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.4), 1px 1px  0 white  !important;
 	box-shadow: inset 1px 1px 2px rgba(0,0,0,0.4), 1px 1px  0 white  !important;
@@ -722,11 +746,12 @@ span.zoom_tool {
 	-webkit-box-shadow: inset 1px 1px 2px white, 1px 1px 1px rgba(0,0,0,0.3);
 	moz-box-shadow: inset 1px 1px 2px white, 1px 1px 1px rgba(0,0,0,0.3);
 	box-shadow: inset 1px 1px 2px white, 1px 1px 1px rgba(0,0,0,0.3);
-	background-color: #E8E8E8;
+	background-color: #fff;
 	cursor: pointer;
-	border-radius: 3px;
+	/*border-radius: 3px;
 	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
+	-webkit-border-radius: 3px;*/
+	border: 1px solid #0b2974;
 }
 
  #main_menu li#tool_open,  #main_menu li#tool_import {

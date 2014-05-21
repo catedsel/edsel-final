@@ -7,7 +7,9 @@
 			<stop stop-opacity="1" stop-color="#666666" offset="1"/>
 		</linearGradient>
 		</defs>
-		<polygon points="6.09251,19.6032 0.577744,10.0516 6.09251,0.5 17.1217,0.5 22.6365,10.0516 17.1217,19.6032" stroke="#000000" fill="url(#svg_i22)"/>	 </svg>
+		<polygon fill="none" stroke="#000000" stroke-width="1.4" stroke-miterlimit="10" points="6.99,20.676 1.981,12 6.99,3.324 
+	17.01,3.324 22.02,12 17.01,20.676 "/>
+</svg>
 	</g>
 	
 	<g id="svg_eof"/>

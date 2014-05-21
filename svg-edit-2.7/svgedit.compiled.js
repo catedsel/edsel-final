@@ -9238,23 +9238,24 @@ $.SvgCanvas = function(a, I) {
                         h = Fb + (h ? ": " + h : "");
                         a("title:first").text(h)
                     }, Ya = c.zoomChanged = function(h, k, H) {
-                        if (k = c.setBBoxZoom(k, Y.width() - 15, Y.height() - 15)) {
-                            h = k.zoom;
-                            k = k.bbox;
-                            if (h < 0.001) ab({
-                                value: 0.1
-                            });
-                            else {
-                                a("#zoom").val((h * 100).toFixed(1));
-                                H ? eb() : eb(false, {
-                                    x: k.x * h + k.width * h / 2,
-                                    y: k.y * h + k.height * h / 2
-                                });
-                                c.getMode() ==
-                                    "zoom" && k.width && mb();
-                                Pb()
-                            }
-                        }
+                        //THIS IS THE OTHER ZOOMING BITCH
+                        // if (k = c.setBBoxZoom(k, Y.width() - 15, Y.height() - 15)) {
+                        //     h = k.zoom;
+                        //     k = k.bbox;
+                        //     if (h < 0.001) ab({
+                        //         value: 0.1
+                        //     });
+                        //     else {
+                        //         a("#zoom").val((h * 100).toFixed(1));
+                        //         H ? eb() : eb(false, {
+                        //             x: k.x * h + k.width * h / 2,
+                        //             y: k.y * h + k.height * h / 2
+                        //         });
+                        //         c.getMode() ==
+                        //             "zoom" && k.width && mb();
+                        //         Pb()
+                        //     }
+                        // }
                     };
                 ab = function(h) {
                     var k = h.value / 100;
