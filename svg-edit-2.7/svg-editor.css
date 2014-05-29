@@ -12,20 +12,29 @@ html, body, div{
 	-webkit-user-drag: text;
 }
 
-#tool_area {
-	padding: 5px;
-	background: #fff;
-	margin-top: -8px;
+
+/* LEFT TOOL PANEL */
+
+.left-panel-wrap {
+	position: absolute;
+	left: 0;
+	top: 0px;
+	bottom: 0;
+	overflow: auto;
+	padding: 0px;
+/*	z-index: 5;
+*/	border: 3px solid red;
+	border-width: 0px;
+	border-right-width: 1px;
+	background: honeydew;
+	overflow-y: auto;
 }
 
-/*#tool_area:after {
-	content: " ";
-	display: block;
-	clear: both;
-	visibility: hidden;
-	height: 0;
-}*/
+/* TOP BUTTONS */
 
+#tool_area {
+	margin-top: -8px;
+}
 
 .my-button {
 	background-color: #fff;
@@ -36,42 +45,98 @@ html, body, div{
 	color: #000;
 /*	text-shadow: 1px 1px 2px #000;*/
 	border: 1px solid #0b2974;
-/*	box-shadow: inset 1px 1px 2px white, 1px 1px 1px rgba(0,0,0,0.3);
-*/	padding: 7px;
+	box-shadow: inset 1px 1px 2px white, 1px 1px 1px rgba(0,0,0,0.3);
+	padding: 7px;
 	cursor: pointer;
 }
 
+.my-button:hover {
+	background-color: #80dccc;
+	box-shadow: none;
+	color: #fff;
+}
+
 .top-nav-buttons {
-	width: 353px;
+	width: 370px;
 	margin: auto;
 	padding: 10px;
+	position:;
 	/*margin-top: -20px;*/
 }
 
-#tools_top {
-	padding-top: 17px;
-	margin-left: 20px;
+/* TYPE TOOLS PANEL */
+
+#font_family_dropdown {
+	display: inline-block;
 }
-/*.opacity {
-	width: 170px;
-	left: 200px;
-	font-family: 'Josefin Slab', sans-serif;
-	font-weight: 600;
-	font-size: 1.9em;
 
-}*/
-
-/*.fill-color {
-	font-family: 'Josefin Slab', sans-serif;
-	font-weight: 600;
-	font-size: 1.9em;
-	border: 3px solid pink;
+#tool_font_size {
+	clear: left;
 	float: left;
 }
 
-.color_block_fill_color {
+#text_panel {
+	background: white;
+	border: 1px solid black;
+	padding: 10px;
+	float: left;
+	margin: 10px;
+
+}
+
+#text_panel:after {
+	content: " ";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+}
+
+#tool_font_family {
+	clear: left;
+	float: left;
+	margin-left: -3px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+
+/* REDO/UNDO GRID PANEL */
+
+#tool_undo, #tool_redo {
 	float:left;
-}*/
+
+}
+
+/* CLONE/DELETE PANEL */
+
+#tool_clone, #tool_delete {
+	float: left;
+	clear: left;
+}
+
+#selected_panel {
+	background-color: #fff;
+	padding: 10px;
+	border: 1px solid #000;
+	float: left;
+	clear: left;
+	margin: 10px;
+}
+
+/* ROTATION/SELECTED PANEL */
+
+#rotation_panel {
+	background-color: #fff;
+	padding: 10px;
+	border: 1px solid #000;
+	float: left;
+	clear: left;
+	margin: 10px;
+}
+
+
+/** all else **/
 
 #browser-not-supported {
 	font-size: 0.8em;
@@ -545,9 +610,17 @@ div.palette_item:first-child {
 	/*left: 550px;
 	right: 2px;
 	top: 2px;*/
-	height: 40px;
-	border-bottom: none;
+	/*height: 40px;*/
+	float: left;
+	clear:left;
+	/*width: 400px;
+	margin-top: 20px;
+	margin-left: 200px;*/
 	overflow: auto;
+	background-color: white;
+	padding: 10px;
+	border: 1px solid #000;
+	margin: 10px;
 }
 
 #tools_top .tool_sep {
@@ -555,13 +628,18 @@ div.palette_item:first-child {
 }
 
 #tools_left {
-	position: absolute;
-	border-right: none;
-	width: 32px;
-	top: 70px;
-	left: 1px;
-	margin-top: -2px;
-	padding-left: 2px;
+	/*position: absolute;*/
+	float: left;
+	clear: left;
+/*	border-right: none;*/
+/*	width: 32px;*/
+	/*top: 180px;*/
+	/*left: 315px;*/
+	background-color: #fff;
+	border: 2px solid #0b2974;
+	padding: 10px;
+	/*margin-top: -2px;
+	padding-left: 2px;*/
 	/*background: #D0D0D0;  Needed so flyout icons don't appear on the left */
 	z-index: 4;
 }
@@ -588,7 +666,7 @@ div.palette_item:first-child {
 }
 
 #tools_top div[id$="_panel"]:not(#editor_panel):not(#history_panel) {
-	display: none;
+	/*display: none;*/
 }
 
 #editor_panel, #history_panel {
@@ -628,13 +706,16 @@ div.palette_item:first-child {
 	line-height: 26px;
 }
 
-div.toolset,
-div.toolset > * {
-	float: left;
+div.toolset {
+	/*float: left;*/
+}
+
+div.toolset.selected-panel {
+	clear:left;
 }
 
 div.toolset {
-	height: 34px;
+	/*height: 34px;*/
 }
 
 div.toolset label span {
@@ -691,8 +772,8 @@ span.zoom_tool {
 
 .dropdown button {
 	width: 15px;
-	height: 21px;
-	margin: 6px 0 0 1px;
+	height: 20px;
+	margin: 3px 0 0 3px;
 	padding: 0;
 	border-left: 1px solid #FFFFFF;
 	border-top: 1px solid #FFFFFF;
@@ -812,7 +893,7 @@ span.zoom_tool {
 }
 
 .icon_label {
-	float: left;
+	/*float: left;*/
 	padding-top: 3px;
 	padding-right: 3px;
 	box-sizing: border-box;
@@ -830,6 +911,7 @@ span.zoom_tool {
 	text-align: center;
 	padding-left: 2px;
 	position: relative;
+	float: left;
 }
 
 #text {
@@ -1057,7 +1139,7 @@ span.zoom_tool {
 	}
 	#rulers #ruler_corner,
 	#rulers #ruler_x, #tools_left {
-		top: 71px;
+		/*top: 71px;*/
 	}
 
 	#rulers #ruler_y {
@@ -1069,7 +1151,7 @@ span.zoom_tool {
 	}
 
 	#selected_panel {
-		clear: right;
+		/*clear: right;*/
 	}
 }
 

@@ -9106,7 +9106,7 @@ $.SvgCanvas = function(a, I) {
                             F = u.baseUnit !== "px" ? u.baseUnit : null,
                             Q = H == "pathedit",
                             U = a("#cmenu_canvas li");
-                        a("#selected_panel, #multiselected_panel, #g_panel, #rect_panel, #circle_panel,#ellipse_panel, #line_panel, #text_panel, #image_panel, #container_panel, #use_panel, #a_panel").hide();
+                        a("#multiselected_panel, #g_panel, #rect_panel, #circle_panel,#ellipse_panel, #line_panel, #image_panel, #container_panel, #use_panel, #a_panel").hide();
                         if (h != null) {
                             var Z = h.nodeName,
                                 ga = c.getRotationAngle(h);
@@ -9391,7 +9391,7 @@ $.SvgCanvas = function(a, I) {
                             }
                         })
                     }, Yb = o.setIconSize = function(h) {
-                        var k = a("#tools_top .toolset, #editor_panel > *, #history_panel > *,\t\t\t\t#main_button, #tools_left > *, #path_node_panel > *, #multiselected_panel > *,\t\t\t\t#g_panel > *, #tool_font_size > *, .tools_flyout"),
+                        var k = a("#tools_top .toolset, #editor_panel > *, #history_panel > *,\t\t\t\t#main_button, #tools_left > *, #path_node_panel > *, #multiselected_panel > *,\t\t\t\t#g_panel > *, .tools_flyout"),
                             H = 1;
                         H = typeof h === "number" ? h : {
                             s: 0.75,
