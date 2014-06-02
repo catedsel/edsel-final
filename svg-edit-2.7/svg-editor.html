@@ -15,6 +15,8 @@
 
     <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:400,600,700' rel='stylesheet' type='text/css'>
 
+    <link rel="stylesheet" type="text/css" href="coneriascript/coneriascript.css">
+
 
     <!--{if jquery_release}>
 
@@ -68,6 +70,47 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
     <script src="jquery-ui/jquery-ui-1.8.17.custom.min.js"></script>
     <script src="jgraduate/jpicker.js"></script>
 
+   <!--
+/**
+ * @license
+ * MyFonts Webfont Build ID 2789688, 2014-04-06T22:17:06-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Coneria Script Slanted Medium by Måns Grebäck
+ * URL: http://www.myfonts.com/fonts/mawns/coneria-script/slanted-medium/
+ * 
+ * Webfont: Coneria Script Fat by Måns Grebäck
+ * URL: http://www.myfonts.com/fonts/mawns/coneria-script/fat/
+ * 
+ * Webfont: Coneria Script Light by Måns Grebäck
+ * URL: http://www.myfonts.com/fonts/mawns/coneria-script/light/
+ * 
+ * Webfont: Coneria Script Medium by Måns Grebäck
+ * URL: http://www.myfonts.com/fonts/mawns/coneria-script/medium/
+ * 
+ * Webfont: Coneria Script Slanted Fat by Måns Grebäck
+ * URL: http://www.myfonts.com/fonts/mawns/coneria-script/slanted-fat/
+ * 
+ * Webfont: Coneria Script Slanted Light by Måns Grebäck
+ * URL: http://www.myfonts.com/fonts/mawns/coneria-script/slanted-light/
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2789688
+ * Licensed pageviews: 10,000
+ * Webfonts copyright: Copyright (c) 2012 by M&#x00E5;ns Greb&#x00E4;ck. All rights
+ * reserved. Personal use only. Please visit www.mawns.com for a commercial license. 
+ * 
+ * © 2014 MyFonts Inc
+*/
+
+-->
+
+
     <script>
     // $(document).ready(function(){
     // 	$("#workarea").scroll(function(e){
@@ -112,40 +155,60 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
                 <div class="panel-header">
                     Type Tools
                 </div>
-                <div class="toolset">
-                    <div class="tool_button" id="tool_bold" title="Bold Text [B]">
-                        <span></span>B</div>
-                    <div class="tool_button" id="tool_italic" title="Italic Text [I]">
-                        <span></span>i</div>
+                
+                <div class="background text-panel">
                 </div>
-
-                <div class="toolset" id="tool_font_family">
-                    <label id="font-family-label">
-                        <!-- Font family -->
-                        <input id="font_family" type="text" title="Change Font Family" size="12" />
-                    </label>
-                    <div id="font_family_dropdown" class="dropdown">
-                        <button></button>
-                        <div id="font-list-drop">
-                            <ul>
-                                <li style="font-family:serif">Serif</li>
-                                <li style="font-family:sans-serif">Sans-serif</li>
-                                <li style="font-family:cursive">Cursive</li>
-                                <li style="font-family:fantasy">Fantasy</li>
-                                <li style="font-family:monospace">Monospace</li>
-                            </ul>
+                    <span class="input-title-font-family">Font:</span>
+                    <div class="toolset" id="tool_font_family">
+                        <label id="font-family-label">
+                            <!-- Font family -->
+                            <input id="font_family" type="text" title="Change Font Family" size="12" />
+                        </label>
+                        <div id="font_family_dropdown" class="dropdown">
+                            <button></button>
+                            <div id="font-list-drop">
+                                <ul>
+                                    <li style="font-family:serif">Serif</li>
+                                    <li style="font-family:sans-serif">Sans-serif</li>
+                                    <li style="font-family:cursive">Cursive</li>
+                                    <li style="font-family:fantasy">Fantasy</li>
+                                    <li style="font-family:monospace">Monospace</li>
+                                    <li style="font-family:'Josefin Slab'">Josefin Slab</li>
+                                    <li style="font-family:'ConeriaScriptLight' src: url('coneriascript/coneriascript.css')">Coneria Script</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
+
+                    <label id="tool_font_size" title="Change Font Size">
+                        <span class="input-title">Size:</span>
+                        <input id="font_size" size="3" value="0" type="text" />
+                    </label>
+
+                    <div class="toolset">
+                        <div class="font-style">
+                            <div class="tool_button" id="tool_bold" title="Bold Text [B]">
+                                <span></span>B</div>
+                            <div class="tool_button" id="tool_italic" title="Italic Text [I]">
+                                <span></span>i</div>
+                        </div><!--close font-style-->
+                    </div>
+
+                    <!-- Not visible, but still used -->
+                    <input id="text" type="text" size="35" />
                 </div>
 
-                <label id="tool_font_size" title="Change Font Size">
-                    <span id="font_sizeLabel" class="icon_label"></span>
-                    <input id="font_size" size="3" value="0" type="text" />
-                </label>
-
-                <!-- Not visible, but still used -->
-                <input id="text" type="text" size="35" />
-            </div>
+                <div id="tools_left" class="tools_panel">
+                    <div class="tool_button" id="tool_select" title="Select Tool"></div>
+                    <div class="tool_button" id="tool_line" title="Line Tool"></div>
+                    <!-- <div class="tool_button flyout_current" id="tools_rect_show" title="Square/Rect Tool">
+                        <div class="flyout_arrow_horiz"></div>
+                    </div> -->
+                    <!-- <div class="tool_button flyout_current" id="tools_ellipse_show" title="Ellipse/Circle Tool">
+                        <div class="flyout_arrow_horiz"></div>
+                    </div> -->
+                    <div class="tool_button" id="tool_text" title="Text Tool"></div>
+                </div>
 
             <div id="tools_top" class="tools_panel">
                 <div class="panel-header">Redo/Undo + Grid</div>
@@ -155,6 +218,7 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
                     <div class="push_button tool_button_disabled" id="tool_redo" title="Redo [Y]"></div>
                 </div>
             </div>
+
             <!--close tools_top-->
             <!-- Buttons when a single element is selected -->
             <div id="selected_panel">
@@ -174,31 +238,8 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
                 </label>
             </div>
             <!--close rotation_panel-->
-            <div id="tools_left" class="tools_panel">
-                <div class="tool_button" id="tool_select" title="Select Tool"></div>
-                <div class="tool_button" id="tool_line" title="Line Tool"></div>
-                <div class="tool_button flyout_current" id="tools_rect_show" title="Square/Rect Tool">
-                    <div class="flyout_arrow_horiz"></div>
-                </div>
-                <div class="tool_button flyout_current" id="tools_ellipse_show" title="Ellipse/Circle Tool">
-                    <div class="flyout_arrow_horiz"></div>
-                </div>
-                <div class="tool_button" id="tool_text" title="Text Tool"></div>
-                <div style="display: none">
-                    <div id="tool_rect" title="Rectangle"></div>
-                    <div id="tool_square" title="Square"></div>
-                    <div id="tool_fhrect" title="Free-Hand Rectangle"></div>
-                    <div id="tool_ellipse" title="Ellipse"></div>
-                    <div id="tool_circle" title="Circle"></div>
-                    <div id="tool_fhellipse" title="Free-Hand Ellipse"></div>
-                </div>
-            </div>
-
-
         </div>
         <!--close left-panel-wrap-->
-
-
 
         <div id="workarea">
             <style id="styleoverrides" type="text/css" media="screen" scoped="scoped"></style>
@@ -273,7 +314,7 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
                 </div>
             </div>
 
-            <div id="tools_bottom_2">
+            <div id="tools_bottom_2" style="z-index: 10000">
                 <div id="color_tools_poo">
 
                     <div class="color_tool" id="tool_fill" style="border:2px solid red; ">

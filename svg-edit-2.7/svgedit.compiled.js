@@ -8222,7 +8222,7 @@ $.SvgCanvas = function(a, I) {
                 }, D = {}, u = {
                     extensions: [],
                     allowedOrigins: []
-                }, A = ["ext-overview_window.js", "ext-connector.js", "ext-shapes.js", "ext-imagelib.js", "ext-grid.js", "ext-polygon.js", "ext-star.js", "ext-storage.js"
+                }, A = ["ext-overview_window.js", "ext-connector.js", "ext-shapes.js", "ext-imagelib.js", "ext-grid.js", "ext-storage.js"
                 ],
                 p = {
                     canvasName: "default",
@@ -9294,8 +9294,8 @@ $.SvgCanvas = function(a, I) {
                                 k = h.offset();
                             h = h.outerWidth();
                             a(this).css({
-                                left: (k.left + h) * o.tool_scale,
-                                top: k.top
+                                left: 40,
+                                top: 449
                             })
                         })
                     }, ra = function(h) {
@@ -9337,7 +9337,7 @@ $.SvgCanvas = function(a, I) {
                             U.mousedown(function(la) {
                                 if (U.hasClass("disabled")) return false;
                                 var ia = a(k),
-                                    na = ja.left + 34,
+                                    na = 74,
                                     sa = ia.width() * -1,
                                     Ha = ia.data("shown_popop") ? 200 : 0;
                                 ga = setTimeout(function() {
@@ -9391,7 +9391,7 @@ $.SvgCanvas = function(a, I) {
                             }
                         })
                     }, Yb = o.setIconSize = function(h) {
-                        var k = a("#tools_top .toolset, #editor_panel > *, #history_panel > *,\t\t\t\t#main_button, #tools_left > *, #path_node_panel > *, #multiselected_panel > *,\t\t\t\t#g_panel > *, .tools_flyout"),
+                        var k = a("#tools_top .toolset, #editor_panel > *, #history_panel > *,\t\t\t\t#main_button, #tools_left > *, #path_node_panel > *, #multiselected_panel > *,\t\t\t\t#g_panel > *"),
                             H = 1;
                         H = typeof h === "number" ? h : {
                             s: 0.75,
@@ -10115,8 +10115,8 @@ $.SvgCanvas = function(a, I) {
                                 if (!H) {
                                     var Z = a(h).position();
                                     Q.css({
-                                        top: Z.top + 24,
-                                        left: Z.left - 10
+                                        top: Z.top - 33,
+                                        left: Z.left
                                     })
                                 }
                                 Q.show();
