@@ -152,12 +152,11 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
         <div class="left-panel-wrap">
 
             <div id="text_panel">
-                <div class="panel-header">
+                <div class="background text-panel"></div>
+                <!-- <div class="panel-header">
                     Type Tools
-                </div>
+                </div> -->
                 
-                <div class="background text-panel">
-                </div>
                     <span class="input-title-font-family">Font:</span>
                     <div class="toolset" id="tool_font_family">
                         <label id="font-family-label">
@@ -199,6 +198,7 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
                 </div>
 
                 <div id="tools_left" class="tools_panel">
+                    <div class="background left-panel"></div>
                     <div class="tool_button" id="tool_select" title="Select Tool"></div>
                     <div class="tool_button" id="tool_line" title="Line Tool"></div>
                     <!-- <div class="tool_button flyout_current" id="tools_rect_show" title="Square/Rect Tool">
@@ -211,7 +211,7 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
                 </div>
 
             <div id="tools_top" class="tools_panel">
-                <div class="panel-header">Redo/Undo + Grid</div>
+                <div class="background top-panel"></div>
                 <!-- History buttons -->
                 <div id="history_panel">
                     <div class="push_button tool_button_disabled" id="tool_undo" title="Undo [Z]"></div>
@@ -222,7 +222,7 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
             <!--close tools_top-->
             <!-- Buttons when a single element is selected -->
             <div id="selected_panel">
-                <div class="panel-header">Duplicate/ Delete</div>
+                <div class="background selected-panel"></div>
                 <div class="toolset selected-panel">
                     <div class="push_button" id="tool_clone" title="Duplicate Element [D]"></div>
                     <div class="push_button" id="tool_delete" title="Delete Element [Delete/Backspace]"></div>

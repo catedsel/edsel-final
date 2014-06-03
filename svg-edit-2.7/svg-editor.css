@@ -91,17 +91,17 @@ html, body, div{
 
 /* TYPE TOOLS PANEL */
 .background.text-panel {
-	background-color: #80dccc;
+	background-color: #c7c7c7;
 	padding: 5px;
-	width: 2px;
+	width: 3px;
 	position: absolute;
 	float: left;
-	height: 120px;
+	height: 150px;
 	left: -3px;
+	top: 0px;
 }
 
 .background.text-panel:after {
-	background-color: red;
 	content: " ";
 	display: block;
 	clear: both;
@@ -122,10 +122,12 @@ html, body, div{
 }
 
 #text_panel {
-	padding: 10px;
+/*	padding: 10px;*/
+	margin-top: 10px;
 	float: left;
-	margin: 10px;
-	width: 170px;
+/*	margin: 10px;*/
+	margin-left: 30px;
+	margin-bottom: 10px;
 }
 
 #text_panel:after {
@@ -167,9 +169,51 @@ html, body, div{
 
 /* REDO/UNDO GRID PANEL */
 
+.background.top-panel {
+	background-color: #c7c7c7;
+	padding: 5px;
+	width: 3px;
+	position: absolute;
+	float: left;
+	height: 120px;
+	left: -3px;
+	top: 347px;
+}
+
+.background.top-panel:after {
+	content: " ";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+}
+
 #tool_undo, #tool_redo {
 	float:left;
+	clear:left;
 
+}
+
+#editor_panel {
+	float:left;
+	clear:left;
+}
+
+
+#tools_top {
+	/*left: 550px;
+	right: 2px;
+	top: 2px;*/
+	/*height: 40px;*/
+	float: left;
+	clear:left;
+	/*width: 400px;
+	margin-top: 20px;
+	margin-left: 200px;*/
+	background-color: white;
+	margin-top: 23px;
+	margin-bottom: 10px;
+	margin-left: 30px;
 }
 
 /* CLONE/DELETE PANEL */
@@ -181,8 +225,6 @@ html, body, div{
 
 #selected_panel {
 	background-color: #fff;
-	padding: 10px;
-	border: 1px solid #000;
 	float: left;
 	clear: left;
 	margin: 10px;
@@ -197,6 +239,47 @@ html, body, div{
 	float: left;
 	clear: left;
 	margin: 10px;
+}
+
+/* LEFT PANEL */
+
+.background.left-panel {
+	background-color: #ffda11;
+	padding: 5px;
+	width: 3px;
+	position: absolute;
+	float: left;
+	height: 153px;
+	left: -3px;
+	top: 170px;
+}
+
+.background.left-panel:after {
+	content: " ";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+}
+
+#tools_left {
+	/*position: absolute;*/
+	float: left;
+	clear: left;
+/*	margin: 10px;*/
+	margin-left: 30px;
+	margin-top: 18px;
+	margin-bottom: 10px;
+/*	border-right: none;*/
+/*	width: 32px;*/
+	/*top: 180px;*/
+	/*left: 315px;*/
+	background-color: #fff;
+/*	padding: 10px;*/
+	/*margin-top: -2px;
+	padding-left: 2px;*/
+	/*background: #D0D0D0;  Needed so flyout icons don't appear on the left */
+	z-index: 4;
 }
 
 
@@ -669,43 +752,8 @@ div.palette_item:first-child {
 	box-shadow: inset 1px 1px 2px rgba(0,0,0,0.4), 1px 1px  0 white  !important;
 }
 
-#tools_top {
-	/*left: 550px;
-	right: 2px;
-	top: 2px;*/
-	/*height: 40px;*/
-	float: left;
-	clear:left;
-	/*width: 400px;
-	margin-top: 20px;
-	margin-left: 200px;*/
-	overflow: auto;
-	background-color: white;
-	padding: 10px;
-	border: 1px solid #000;
-	margin: 10px;
-}
-
 #tools_top .tool_sep {
 	margin-top: 5px;
-}
-
-#tools_left {
-	/*position: absolute;*/
-	float: left;
-	clear: left;
-	margin: 10px;
-/*	border-right: none;*/
-/*	width: 32px;*/
-	/*top: 180px;*/
-	/*left: 315px;*/
-	background-color: #fff;
-	border: 1px solid black;
-	padding: 10px;
-	/*margin-top: -2px;
-	padding-left: 2px;*/
-	/*background: #D0D0D0;  Needed so flyout icons don't appear on the left */
-	z-index: 4;
 }
 
 #workarea.wireframe #svgcontent * {
@@ -735,7 +783,6 @@ div.palette_item:first-child {
 
 #editor_panel, #history_panel {
 	height: 34px;
-	float: left;
 }
 
 #multiselected_panel .selected_tool {
@@ -789,7 +836,6 @@ div.toolset label span {
 }
 
 #tools_top > div > * {
-	float: left;
 	margin-right: 2px;
 }
 
