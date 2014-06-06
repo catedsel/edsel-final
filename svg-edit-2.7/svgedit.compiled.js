@@ -9106,7 +9106,7 @@ $.SvgCanvas = function(a, I) {
                             F = u.baseUnit !== "px" ? u.baseUnit : null,
                             Q = H == "pathedit",
                             U = a("#cmenu_canvas li");
-                        a("#multiselected_panel, #g_panel, #rect_panel, #circle_panel,#ellipse_panel, #line_panel, #image_panel, #container_panel, #use_panel, #a_panel").hide();
+                        a("#multiselected_panel, #g_panel, #rect_panel, #circle_panel,#ellipse_panel, #line_panel, #image_panel, #use_panel, #a_panel").hide();
                         if (h != null) {
                             var Z = h.nodeName,
                                 ga = c.getRotationAngle(h);
@@ -9294,8 +9294,8 @@ $.SvgCanvas = function(a, I) {
                                 k = h.offset();
                             h = h.outerWidth();
                             a(this).css({
-                                left: 40,
-                                top: 449
+                                left: 63,
+                                top: 207
                             })
                         })
                     }, ra = function(h) {
@@ -10596,7 +10596,7 @@ $.SvgCanvas = function(a, I) {
                             cancel: ".jGraduate_tabs, .jGraduate_colPick, .jGraduate_gradPick, .jPicker",
                             containment: "window"
                         }).css(u.colorPickerCSS || {
-                            left: h.left - 140,
+                            left: h.left + 100,
                             bottom: 40
                         }).jGraduate({
                             paint: H,

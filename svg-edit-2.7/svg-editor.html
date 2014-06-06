@@ -70,7 +70,7 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
     <script src="jquery-ui/jquery-ui-1.8.17.custom.min.js"></script>
     <script src="jgraduate/jpicker.js"></script>
 
-   <!--
+    <!--
 /**
  * @license
  * MyFonts Webfont Build ID 2789688, 2014-04-06T22:17:06-0400
@@ -113,13 +113,13 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
 
     <script>
     // $(document).ready(function(){
-    // 	$("#workarea").scroll(function(e){
-    // 		console.log(e);
-    // 		var width = $(this).css("width");
-    // 		var height = $(this).css("height");
-    // 		$(this).css("width", width);
-    // 		$(this).css("height", height);
-    // 	})
+    //  $("#workarea").scroll(function(e){
+    //      console.log(e);
+    //      var width = $(this).css("width");
+    //      var height = $(this).css("height");
+    //      $(this).css("width", width);
+    //      $(this).css("height", height);
+    //  })
     // });
 
     //
@@ -150,68 +150,22 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
         </div>
 
         <div class="left-panel-wrap">
+        <div class="tools-total">
+            <p class="area-title">Tools</p>
 
-            <div id="text_panel">
-                <div class="background text-panel"></div>
-                <!-- <div class="panel-header">
-                    Type Tools
-                </div> -->
-                
-                    <span class="input-title-font-family">Font:</span>
-                    <div class="toolset" id="tool_font_family">
-                        <label id="font-family-label">
-                            <!-- Font family -->
-                            <input id="font_family" type="text" title="Change Font Family" size="12" />
-                        </label>
-                        <div id="font_family_dropdown" class="dropdown">
-                            <button></button>
-                            <div id="font-list-drop">
-                                <ul>
-                                    <li style="font-family:serif">Serif</li>
-                                    <li style="font-family:sans-serif">Sans-serif</li>
-                                    <li style="font-family:cursive">Cursive</li>
-                                    <li style="font-family:fantasy">Fantasy</li>
-                                    <li style="font-family:monospace">Monospace</li>
-                                    <li style="font-family:'Josefin Slab'">Josefin Slab</li>
-                                    <li style="font-family:'ConeriaScriptLight' src: url('coneriascript/coneriascript.css')">Coneria Script</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <label id="tool_font_size" title="Change Font Size">
-                        <span class="input-title">Size:</span>
-                        <input id="font_size" size="3" value="0" type="text" />
-                    </label>
-
-                    <div class="toolset">
-                        <div class="font-style">
-                            <div class="tool_button" id="tool_bold" title="Bold Text [B]">
-                                <span></span>B</div>
-                            <div class="tool_button" id="tool_italic" title="Italic Text [I]">
-                                <span></span>i</div>
-                        </div><!--close font-style-->
-                    </div>
-
-                    <!-- Not visible, but still used -->
-                    <input id="text" type="text" size="35" />
-                </div>
-
-                <div id="tools_left" class="tools_panel">
-                    <div class="background left-panel"></div>
-                    <div class="tool_button" id="tool_select" title="Select Tool"></div>
-                    <div class="tool_button" id="tool_line" title="Line Tool"></div>
-                    <!-- <div class="tool_button flyout_current" id="tools_rect_show" title="Square/Rect Tool">
+            <div id="tools_left" class="tools_panel">
+                <div class="tool_button" id="tool_select" title="Select Tool"></div>
+                <div class="tool_button" id="tool_line" title="Line Tool"></div>
+                <!-- <div class="tool_button flyout_current" id="tools_rect_show" title="Square/Rect Tool">
                         <div class="flyout_arrow_horiz"></div>
                     </div> -->
-                    <!-- <div class="tool_button flyout_current" id="tools_ellipse_show" title="Ellipse/Circle Tool">
+                <!-- <div class="tool_button flyout_current" id="tools_ellipse_show" title="Ellipse/Circle Tool">
                         <div class="flyout_arrow_horiz"></div>
                     </div> -->
-                    <div class="tool_button" id="tool_text" title="Text Tool"></div>
-                </div>
+                <div class="tool_button" id="tool_text" title="Text Tool"></div>
+            </div>
 
             <div id="tools_top" class="tools_panel">
-                <div class="background top-panel"></div>
                 <!-- History buttons -->
                 <div id="history_panel">
                     <div class="push_button tool_button_disabled" id="tool_undo" title="Undo [Z]"></div>
@@ -231,13 +185,119 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
             <!--close selected_panel-->
 
             <div id="rotation_panel">
-                <div class="panel-header">Rotate</div>
                 <label id="tool_angle" title="Change rotation angle" class="toolset">
-                    <span id="angleLabel" class="icon_label"></span>
+                    <span class="tool-title">Rotate Object:</span>
                     <input id="angle" size="4" value="0" type="text" />
                 </label>
             </div>
             <!--close rotation_panel-->
+        </div><!--close tools-total-->
+
+<p class="area-title text">Text</p>
+            <div id="text_panel">
+                <span class="input-title-font-family">Font:</span>
+                <div class="toolset" id="tool_font_family">
+                    <label id="font-family-label">
+                        <!-- Font family -->
+                        <input id="font_family" type="text" title="Change Font Family" size="12" />
+                    </label>
+                    <div id="font_family_dropdown" class="dropdown">
+                        <button></button>
+                        <div id="font-list-drop">
+                            <ul>
+                                <li style="font-family:serif">Serif</li>
+                                <li style="font-family:sans-serif">Sans-serif</li>
+                                <li style="font-family:cursive">Cursive</li>
+                                <li style="font-family:fantasy">Fantasy</li>
+                                <li style="font-family:monospace">Monospace</li>
+                                <li style="font-family:'Josefin Slab'">Josefin Slab</li>
+                                <li style="font-family:'ConeriaScriptLight' src: url('coneriascript/coneriascript.css')">Coneria Script</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <label id="tool_font_size" title="Change Font Size">
+                    <span class="input-title">Size:</span>
+                    <input id="font_size" size="3" value="0" type="text" />
+                </label>
+
+                <div class="toolset">
+                    <div class="font-style">
+                        <div class="tool_button" id="tool_bold" title="Bold Text [B]">
+                            <span></span>B</div>
+                        <div class="tool_button" id="tool_italic" title="Italic Text [I]">
+                            <span></span>i</div>
+                    </div>
+                    <!--close font-style-->
+                </div>
+
+                <!-- Not visible, but still used -->
+                <input id="text" type="text" size="35" />
+            </div>
+
+                        <div id="tools_bottom_2" style="z-index: 10000">
+                            <p class="area-title color">Color</p>
+                <div id="color_tools_poo">
+
+                    <div class="color_tool" id="tool_fill">
+                        <span>Fill Color:</span>
+                        <div class="color_block">
+                            <div id="fill_bg"></div>
+                            <div id="fill_color" class="color_block"></div>
+                        </div>
+                    </div>
+
+                    <div class="color_tool" id="tool_stroke">
+                        <span>Stroke Color:</span>
+                        <div class="color_block">
+                            <div id="stroke_bg"></div>
+                            <div id="stroke_color" class="color_block" title="Change stroke color"></div>
+                        </div>
+
+                        <label class="stroke_label">
+                            <span>Stroke Size:</span>
+                            <input id="stroke_width" title="Change stroke width by 1, shift-click to change by 0.1" size="9" value="5" type="text" data-attr="Stroke Width" />
+                        </label>
+
+                        <!-- <div id="toggle_stroke_tools" title="Show/hide more stroke tools"></div> -->
+
+                        <label class="stroke_tool">
+                            <span>Stroke Style:</span>
+                            <select id="stroke_style" title="Change stroke dash style">
+                                <option selected="selected" value="none">&#8212;</option>
+                                <option value="2,2">...</option>
+                                <option value="5,5">- -</option>
+                                <option value="5,2,2,2">- .</option>
+                                <option value="5,2,2,2,2,2">- ..</option>
+                            </select>
+                        </label>
+
+                    </div>
+
+                    <div class="color_tool opacity" id="tool_opacity" title="Change selected item opacity">
+                        <span>Opacity</span>
+                        <label>
+                            <input id="group_opacity" size="3" value="100" type="text" />
+                        </label>
+                        <div id="opacity_dropdown" class="dropdown">
+                            <button></button>
+                            <ul>
+                                <li>0%</li>
+                                <li>25%</li>
+                                <li>50%</li>
+                                <li>75%</li>
+                                <li>100%</li>
+                                <li class="special">
+                                    <div id="opac_slider"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
         <!--close left-panel-wrap-->
 
@@ -293,84 +353,25 @@ by creating the following file and adding by calls to svgEditor.setConfig -->
                 <div id="zoom_panel" class="toolset" title="Change zoom level">
                     <label>
                         <!-- <span id="zoomLabel" class="zoom_tool icon_label"></span>
-		<input id="zoom" size="4" value="120" type="text" /> -->
+        <input id="zoom" size="4" value="120" type="text" /> -->
                     </label>
                     <!--< div id="zoom_dropdown" class="dropdown">
-			<button></button>
-			<ul>
-				<li>1000%</li>
-				<li>400%</li>
-				<li>200%</li>
-				<li>100%</li>
-				<li>50%</li>
-				<li>25%</li>
-				<li id="fit_to_canvas" data-val="canvas">Fit to canvas</li>
-				<li id="fit_to_sel" data-val="selection">Fit to selection</li>
-				<li id="fit_to_layer_content" data-val="layer">Fit to layer content</li>
-				<li id="fit_to_all" data-val="content">Fit to all content</li>
-				<li>100%</li>
-			</ul>
-		</div> -->
+            <button></button>
+            <ul>
+                <li>1000%</li>
+                <li>400%</li>
+                <li>200%</li>
+                <li>100%</li>
+                <li>50%</li>
+                <li>25%</li>
+                <li id="fit_to_canvas" data-val="canvas">Fit to canvas</li>
+                <li id="fit_to_sel" data-val="selection">Fit to selection</li>
+                <li id="fit_to_layer_content" data-val="layer">Fit to layer content</li>
+                <li id="fit_to_all" data-val="content">Fit to all content</li>
+                <li>100%</li>
+            </ul>
+        </div> -->
                 </div>
-            </div>
-
-            <div id="tools_bottom_2" style="z-index: 10000">
-                <div id="color_tools_poo">
-
-                    <div class="color_tool" id="tool_fill" style="border:2px solid red; ">
-                        <span>Fill Color</span>
-                        <div class="color_block">
-                            <div id="fill_bg"></div>
-                            <div id="fill_color" class="color_block"></div>
-                        </div>
-                    </div>
-
-                    <div class="color_tool" id="tool_stroke" style="border:2px solid orange;">
-                        <label class="icon_label" title="Change stroke color"></label>
-                        <div class="color_block">
-                            <div id="stroke_bg"></div>
-                            <div id="stroke_color" class="color_block" title="Change stroke color"></div>
-                        </div>
-
-                        <label class="stroke_label" style="border:2px solid green;">
-                            <input id="stroke_width" title="Change stroke width by 1, shift-click to change by 0.1" size="9" value="5" type="text" data-attr="Stroke Width" />
-                        </label>
-
-                        <!-- <div id="toggle_stroke_tools" title="Show/hide more stroke tools"></div> -->
-
-                        <label class="stroke_tool">
-                            <select id="stroke_style" title="Change stroke dash style">
-                                <option selected="selected" value="none">&#8212;</option>
-                                <option value="2,2">...</option>
-                                <option value="5,5">- -</option>
-                                <option value="5,2,2,2">- .</option>
-                                <option value="5,2,2,2,2,2">- ..</option>
-                            </select>
-                        </label>
-
-                    </div>
-
-                    <div class="color_tool opacity" id="tool_opacity" title="Change selected item opacity">
-                        <span>Opacity</span>
-                        <label>
-                            <input id="group_opacity" size="3" value="100" type="text" />
-                        </label>
-                        <div id="opacity_dropdown" class="dropdown">
-                            <button></button>
-                            <ul>
-                                <li>0%</li>
-                                <li>25%</li>
-                                <li>50%</li>
-                                <li>75%</li>
-                                <li>100%</li>
-                                <li class="special">
-                                    <div id="opac_slider"></div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
             </div>
             <!-- <div id="copyright"><span id="copyrightLabel">Powered by</span> <a href="http://svg-edit.googlecode.com/" target="_blank">SVG-edit v2.6-beta</a></div> -->
         </div>

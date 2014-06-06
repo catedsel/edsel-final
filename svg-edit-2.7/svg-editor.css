@@ -1,6 +1,6 @@
 ﻿body {
 	/*background: #D0D0D0;*/
-	background: url('images/congruent_pentagon_4.png') repeat fixed center;
+	background: url('images/congruent_outline.png') repeat fixed center;
 }
 
 html, body, div{
@@ -24,11 +24,12 @@ html, body, div{
 	padding: 0px;
 	padding-right: 20px;
 /*	z-index: 5;
-*/	border: 3px solid #0b2974;
+*/	border: 3px solid #ecebe7;
 	border-width: 0px;
 	border-right-width: 1px;
 	background: #fff;
 	overflow-y: auto;
+	width: 213px;
 }
 
 ::-webkit-scrollbar {
@@ -44,8 +45,8 @@ html, body, div{
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background: rgba(152,152,162,0.9);
-    -webkit-box-shadow: inset 0 0 6px rgba(152,152,162,0.9); 
+    background: #1d8fb2;
+    -webkit-box-shadow: inset 0 0 5px rgba(255,255,255,1); 
 }
 
 .panel-header {
@@ -54,6 +55,48 @@ html, body, div{
 	margin-bottom: 5px;
 	padding-bottom: 5px;
 }
+
+.tools-total {
+	float:left;
+}
+
+.tools-total:after {
+	content: " ";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+}
+
+.area-title {
+	float: left;
+	font-family: ConeriaScriptLight;
+	margin-bottom: 0px;
+	font-size: 3.5em;
+	margin: 10px;
+	margin-bottom: -20px;
+}
+
+.area-title.text {
+	float: left;
+	clear: left;
+	font-family: ConeriaScriptLight;
+	margin-bottom: 0px;
+	font-size: 3.5em;
+	margin-top: 30px;
+	margin-bottom: -20px;
+}
+
+.area-title.color {
+	float: left;
+	font-family: ConeriaScriptLight;
+	margin-bottom: 0px;
+	font-size: 3.5em;
+	margin-top: 30px;
+	margin-bottom: -20px;
+}
+
+
 
 /* TOP BUTTONS */
 
@@ -90,25 +133,6 @@ html, body, div{
 }
 
 /* TYPE TOOLS PANEL */
-.background.text-panel {
-	background-color: #c7c7c7;
-	padding: 5px;
-	width: 3px;
-	position: absolute;
-	float: left;
-	height: 150px;
-	left: -3px;
-	top: 0px;
-}
-
-.background.text-panel:after {
-	content: " ";
-	display: block;
-	clear: both;
-	visibility: hidden;
-	height: 0;
-}
-
 
 #font_family_dropdown {
 	display: inline-block;
@@ -122,12 +146,9 @@ html, body, div{
 }
 
 #text_panel {
-/*	padding: 10px;*/
-	margin-top: 10px;
+	margin: 20px;
 	float: left;
-/*	margin: 10px;*/
-	margin-left: 30px;
-	margin-bottom: 10px;
+	clear: left;
 }
 
 #text_panel:after {
@@ -169,25 +190,6 @@ html, body, div{
 
 /* REDO/UNDO GRID PANEL */
 
-.background.top-panel {
-	background-color: #c7c7c7;
-	padding: 5px;
-	width: 3px;
-	position: absolute;
-	float: left;
-	height: 120px;
-	left: -3px;
-	top: 347px;
-}
-
-.background.top-panel:after {
-	content: " ";
-	display: block;
-	clear: both;
-	visibility: hidden;
-	height: 0;
-}
-
 #tool_undo, #tool_redo {
 	float:left;
 	clear:left;
@@ -211,9 +213,8 @@ html, body, div{
 	margin-top: 20px;
 	margin-left: 200px;*/
 	background-color: white;
-	margin-top: 23px;
-	margin-bottom: 10px;
-	margin-left: 30px;
+	margin: 20px;
+	margin-top: -20px;
 }
 
 /* CLONE/DELETE PANEL */
@@ -227,53 +228,39 @@ html, body, div{
 	background-color: #fff;
 	float: left;
 	clear: left;
-	margin: 10px;
+	margin: 20px;
+	margin-top: -20px;
 }
 
 /* ROTATION/SELECTED PANEL */
 
 #rotation_panel {
 	background-color: #fff;
-	padding: 10px;
-	border: 1px solid #000;
 	float: left;
 	clear: left;
-	margin: 10px;
+	margin-top: 0px;
+	margin-left: 21px;
+}
+
+.tool-title {
+	font-family: 'Josefin Slab', sans-serif;
+	font-size: 1.9em;
+}
+
+#angle {
+	float: left;
+	clear:left;
+	margin-top: 4px;
+	margin-left: -1px;
 }
 
 /* LEFT PANEL */
 
-.background.left-panel {
-	background-color: #ffda11;
-	padding: 5px;
-	width: 3px;
-	position: absolute;
-	float: left;
-	height: 153px;
-	left: -3px;
-	top: 170px;
-}
-
-.background.left-panel:after {
-	content: " ";
-	display: block;
-	clear: both;
-	visibility: hidden;
-	height: 0;
-}
-
 #tools_left {
 	/*position: absolute;*/
 	float: left;
-	clear: left;
-/*	margin: 10px;*/
-	margin-left: 30px;
-	margin-top: 18px;
-	margin-bottom: 10px;
-/*	border-right: none;*/
-/*	width: 32px;*/
-	/*top: 180px;*/
-	/*left: 315px;*/
+	clear:left;
+	margin: 20px;
 	background-color: #fff;
 /*	padding: 10px;*/
 	/*margin-top: -2px;
@@ -281,7 +268,6 @@ html, body, div{
 	/*background: #D0D0D0;  Needed so flyout icons don't appear on the left */
 	z-index: 4;
 }
-
 
 /** all else **/
 
@@ -340,6 +326,7 @@ select {
 	height: 480px;
 	-apple-dashboard-region:dashboard-region(control rectangle 0px 0px 0px 0px); /* for widget regions that shouldn't react to dragging */
 	position: relative;
+	margin-left: 163px;
 	/*
 	  A subtle gradient effect in the canvas.
 	  Just experimenting - not sure if this is worth it.
@@ -1103,9 +1090,15 @@ span.zoom_tool {
 /* Color tools: fill, stroke, opacity
 –––––––––––––––––––––––––––––––––––––*/
 
+.color_tool span {
+	font-family: 'Josefin Slab', serif;
+	font-size: 1.9em;
+	margin-right: 10px;
+}
+
 #tools_bottom_2 {
 	float: left;
-	width: 300px;
+	width: 220px;
 	position: relative;
 	margin-top: 5px;
 	-webkit-transition: width 150ms ease;
@@ -1139,11 +1132,18 @@ span.zoom_tool {
 	border: 1px solid #808080;
 	cursor: pointer;
 	overflow: hidden;
+	margin-top: -17px;
+	margin-bottom: 17px;
 }
 
 #stroke_expand {
 	width: 0;
 	overflow: hidden;
+}
+
+.stroke_tool {
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
 #toggle_stroke_tools {
@@ -1177,17 +1177,23 @@ span.zoom_tool {
 }
 
 .color_tool {
-	position: absolute;
-	overflow: hidden;
-	background: #f0f0f0;
-	height: 26px;
-	line-height: 26px;
 	border-radius: 3px;
-	min-width: 52px;
+	float: left;
+	clear: left;
+	margin: 20px;
+
+}
+
+.color_tool:after {
+	content: " ";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
 }
 
 #tool_stroke.color_tool {
-	width: 130px;
+	margin-top: -10px;
 	z-index: 2;
 	-webkit-transition: width 150ms ease;
 	-moz-transition: width 150ms ease;
@@ -1197,9 +1203,7 @@ span.zoom_tool {
 }
 
 .color_block {
-	position: absolute;
-	top: 0;
-	left: 0;
+
 }
 
 .color_block svg {
@@ -1216,8 +1220,10 @@ span.zoom_tool {
 }
 
 .color_tool .stroke_label {
-	margin-left: 25px;
 	float: left;
+	clear:left;
+	margin-top: 10px;
+	margin-bottom: 7px;
 }
 
 .color_tool > .color_block {
@@ -1231,6 +1237,7 @@ span.zoom_tool {
 
 #tool_opacity {
 	overflow: visible;
+	margin-top: -10px;
 }
 
 @media screen and (max-width:1250px) {
