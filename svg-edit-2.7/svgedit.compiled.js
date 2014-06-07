@@ -9294,7 +9294,7 @@ $.SvgCanvas = function(a, I) {
                                 k = h.offset();
                             h = h.outerWidth();
                             a(this).css({
-                                left: 63,
+                                left: 200,
                                 top: 207
                             })
                         })
@@ -9337,7 +9337,7 @@ $.SvgCanvas = function(a, I) {
                             U.mousedown(function(la) {
                                 if (U.hasClass("disabled")) return false;
                                 var ia = a(k),
-                                    na = 74,
+                                    na = 120,
                                     sa = ia.width() * -1,
                                     Ha = ia.data("shown_popop") ? 200 : 0;
                                 ga = setTimeout(function() {
