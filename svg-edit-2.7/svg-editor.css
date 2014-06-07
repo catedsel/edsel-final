@@ -947,12 +947,11 @@ span.zoom_tool {
 
 .dropdown li {
 	display: block;
-	width: 120px;
-	padding: 4px;
+	width: 180px;
+	padding: 10px;
 	background: #E8E8E8;
 	border: 1px solid #B0B0B0;
 	margin: 0 0 -1px 0;
-	line-height: 16px;
 }
 
 .dropdown li:hover {
@@ -1329,11 +1328,13 @@ span.zoom_tool {
 #option_lists ul {
 	display: none;
 	position: absolute;
-	height: auto;
-	z-index: 50;
+	height: 300px;
+	overflow-y: scroll;
+	z-index: 10000;
 	margin: -10px;
 	list-style: none;
 	padding-left: 0;
+	font-size: 1.3em;
 }
 
 #option_lists .optcols2 {
