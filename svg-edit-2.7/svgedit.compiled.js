@@ -8228,11 +8228,11 @@ $.SvgCanvas = function(a, I) {
                     canvasName: "default",
                     canvas_expansion: 3,
                     initFill: {
-                        color: "FF0000",
+                        color: "FFFFFF",
                         opacity: 1
                     },
                     initStroke: {
-                        width: 5,
+                        width: 1,
                         color: "000000",
                         opacity: 1
                     },
